@@ -38,7 +38,7 @@ const mapStateToProps = (state) => {
 
     };
 };
-const mapActionToProps= (dispatch) =>{
+const mapDispatchToProps= (dispatch) =>{
     return{
         onIncrement: () => dispatch({type:ActionTypes.INCREMENT}),
         onDecrement: () => dispatch({type:ActionTypes.DECREMENT}),
@@ -48,4 +48,4 @@ const mapActionToProps= (dispatch) =>{
         onDeleteResult: (id) => dispatch({type:ActionTypes.DELETE_RESULT,id:id}),
     }
 };
-export default connect(mapStateToProps,mapActionToProps)(Counter);
+export default connect(mapStateToProps,mapDispatchToProps)(Counter);
